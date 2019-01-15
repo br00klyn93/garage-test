@@ -12,9 +12,8 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello(inf):
-    return inf
+
+
 
 
 
@@ -26,7 +25,7 @@ car_name = ""
 msrp = 0
 
 
-
+@app.route('/')
 def find_model():
     global state
     global plate
@@ -34,6 +33,8 @@ def find_model():
 
     url = "https://findbyplate.com/US/"+state+"/"+plate+"/"
     print("URL: "+url)
+    return "URL: "+url
+
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
 
@@ -42,6 +43,7 @@ def find_model():
     car_name = carname[0].get_text()
 
     print(car_name+"F")
+    return car_name+"F"
 
     get_msrp()
 
