@@ -4,6 +4,3 @@ oauth2client
 pprint
 requests
 Flask
-Jinja2
-Werkzeug
-wsgiref
