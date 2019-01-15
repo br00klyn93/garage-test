@@ -1,0 +1,9 @@
+bs4
+gspread
+oauth2client.service_account
+pprint
+requests
+sys
+base64
+json
+os
