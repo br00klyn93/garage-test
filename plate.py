@@ -25,7 +25,7 @@ car_name = ""
 msrp = 0
 
 
-@app.route('/')
+
 def find_model():
     global state
     global plate
@@ -94,7 +94,7 @@ def save_data():
     result = sheet.append_row([info[1], info[2], info[0], msrp, plate, state])
     pp.pprint(result)
 
-
+@app.route('/')
 def get_plate():
     global plate
     global state
