@@ -3,6 +3,4 @@ gspread
 oauth2client
 pprint
 requests
-base64
-json
 
