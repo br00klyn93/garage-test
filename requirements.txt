@@ -4,5 +4,4 @@ oauth2client
 pprint
 requests
 Flask
-urllib
-PIL
+skimage
