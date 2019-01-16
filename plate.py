@@ -90,8 +90,10 @@ def save_data():
 
 @app.route('/')
 def test():
-    for i in os.listdir():
-        return i
+    IMAGE_PATH = 'https://images.autotrader.com/scaler/620/420/cms/images/oversteer/2017/11-nov/masslicense/270721.jpg'
+    with open(IMAGE_PATH, 'rb') as image_file:
+        img_base64 = base64.b64encode(image_file.read())
+        return img_base64
 
 def get_plate():
     global plate
