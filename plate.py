@@ -96,7 +96,7 @@ def save_data():
 
 @app.route('/')
 def test():
-    return os.getcwd()
+    return os.path.dirname(os.path.realpath(__file__))
 
 def get_plate():
     global plate
