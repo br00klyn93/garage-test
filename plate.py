@@ -112,7 +112,7 @@ def get_plate():
 
     plate = data["results"][0]["plate"]
     state = data["results"][0]["region"]
-
+    
     return "Plate: "+plate+" State: " + state
 
     find_model()
