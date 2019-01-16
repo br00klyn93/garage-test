@@ -96,6 +96,7 @@ def save_data():
 
 @app.route('/')
 def test():
+    os.chdir('br00klyn93/garage-test')
     return os.path.dirname(os.path.realpath(__file__))
 
 def get_plate():
