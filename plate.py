@@ -13,11 +13,6 @@ from flask import Flask
 app = Flask(__name__)
 
 
-
-
-
-
-
 state = ""
 plate = ""
 
@@ -96,8 +91,7 @@ def save_data():
 
 @app.route('/')
 def test():
-    os.chdir('br00klyn93/garage-test')
-    return os.path.dirname(os.path.realpath(__file__))
+    return os.listdir()
 
 def get_plate():
     global plate
