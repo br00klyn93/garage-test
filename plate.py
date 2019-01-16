@@ -10,6 +10,7 @@ import os
 from flask import Flask
 from PIL import Image
 import urllib.request
+from skimage import io
 
 app = Flask(__name__)
 
@@ -94,14 +95,8 @@ def save_data():
 def test():
     IMAGE_PATH = 'https://images.autotrader.com/scaler/620/420/cms/images/oversteer/2017/11-nov/masslicense/270721.jpg'
   
-
-    URL = 'https://images.autotrader.com/scaler/620/420/cms/images/oversteer/2017/11-nov/masslicense/270721.jpg'
-
-    with urllib.request.urlopen(URL) as url:
-        with open('temp.jpg', 'wb') as f:
-            f.write(url.read())
-
-    img = Image.open('temp.jpg')
+    img = io.imshow(io.imread(IMAGE_PATH))
+    
     
     with open(img, 'rb') as image_file:
         img_base64 = base64.b64encode(image_file.read())
