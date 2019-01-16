@@ -8,9 +8,6 @@ import base64
 import json
 import os
 from flask import Flask
-from PIL import Image
-import urllib.request
-from skimage import io
 
 app = Flask(__name__)
 
@@ -93,20 +90,13 @@ def save_data():
 
 @app.route('/')
 def test():
-    IMAGE_PATH = 'https://images.autotrader.com/scaler/620/420/cms/images/oversteer/2017/11-nov/masslicense/270721.jpg'
-  
-    img = io.imshow(io.imread(IMAGE_PATH))
     
-    
-    with open(img, 'rb') as image_file:
-        img_base64 = base64.b64encode(image_file.read())
-        return img_base64
 
 def get_plate():
     global plate
     global state
     
-    IMAGE_PATH = 'https://images.autotrader.com/scaler/620/420/cms/images/oversteer/2017/11-nov/masslicense/270721.jpg'
+    IMAGE_PATH = 'test.jpg'
     SECRET_KEY = 'sk_12bac89cf5b2708ed2c92944'
 
     with open(IMAGE_PATH, 'rb') as image_file:
