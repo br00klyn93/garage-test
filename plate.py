@@ -95,6 +95,9 @@ def save_data():
     pp.pprint(result)
 
 @app.route('/')
+def test():
+    return os.getcwd()
+
 def get_plate():
     global plate
     global state
@@ -114,7 +117,7 @@ def get_plate():
     state = data["results"][0]["region"]
     
     return "Plate: "+plate+" State: " + state
-
+    
     find_model()
     
 
