@@ -91,7 +91,8 @@ def save_data():
 
 @app.route('/')
 def test():
-    return os.listdir()
+    for i in os.listdir():
+        return i
 
 def get_plate():
     global plate
