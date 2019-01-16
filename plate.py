@@ -7,7 +7,6 @@ import sys
 import base64
 import json
 import os
-import os
 from flask import Flask
 
 app = Flask(__name__)
@@ -98,7 +97,7 @@ def get_plate():
     global plate
     global state
     
-    IMAGE_PATH = 'test.jpg'
+    IMAGE_PATH = 'https://images.autotrader.com/scaler/620/420/cms/images/oversteer/2017/11-nov/masslicense/270721.jpg'
     SECRET_KEY = 'sk_12bac89cf5b2708ed2c92944'
 
     with open(IMAGE_PATH, 'rb') as image_file:
