@@ -8,6 +8,8 @@ import base64
 import json
 import os
 from flask import Flask
+from PIL import Image
+import urllib.request
 
 app = Flask(__name__)
 
@@ -91,7 +93,17 @@ def save_data():
 @app.route('/')
 def test():
     IMAGE_PATH = 'https://images.autotrader.com/scaler/620/420/cms/images/oversteer/2017/11-nov/masslicense/270721.jpg'
-    with open(IMAGE_PATH, 'rb') as image_file:
+  
+
+    URL = 'https://images.autotrader.com/scaler/620/420/cms/images/oversteer/2017/11-nov/masslicense/270721.jpg'
+
+    with urllib.request.urlopen(URL) as url:
+        with open('temp.jpg', 'wb') as f:
+            f.write(url.read())
+
+    img = Image.open('temp.jpg')
+    
+    with open(img, 'rb') as image_file:
         img_base64 = base64.b64encode(image_file.read())
         return img_base64
 
