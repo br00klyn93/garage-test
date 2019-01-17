@@ -93,6 +93,7 @@ def test():
     IMAGE_PATH = 'test.jpg'
     with open(IMAGE_PATH, 'rb') as image_file:
         img_base64 = base64.b64encode(image_file.read())
+    return "reeeee"
         
 def get_plate():
     global plate
