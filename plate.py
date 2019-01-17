@@ -82,14 +82,9 @@ def save_data():
     pp = pprint.PrettyPrinter()
     result = sheet.append_row([info[1], info[2], info[0], msrp, plate, state])
     pp.pprint(result)
+
     return result
 
-
-# def test():
-#     IMAGE_PATH = 'test.jpg'
-#     with open(IMAGE_PATH, 'rb') as image_file:
-#         img_base64 = base64.b64encode(image_file.read())
-#     return "reeeee"
     
 @app.route('/')  
 def get_plate():
