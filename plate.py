@@ -98,7 +98,7 @@ def get_plate():
     global plate
     global state
     
-    IMAGE_PATH = 'test.jpg'
+    IMAGE_PATH = 'car.jpg'
     SECRET_KEY = 'sk_12bac89cf5b2708ed2c92944'
 
     with open(IMAGE_PATH, 'rb') as image_file:
