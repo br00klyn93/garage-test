@@ -82,6 +82,7 @@ def save_data():
     pp = pprint.PrettyPrinter()
     result = sheet.append_row([info[1], info[2], info[0], msrp, plate, state])
     pp.pprint(result)
+    return result
 
 
 # def test():
