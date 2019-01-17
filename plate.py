@@ -40,6 +40,7 @@ def find_model():
     get_msrp()
 
 def get_msrp():
+    print('here')
     global msrp
     scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
     creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
