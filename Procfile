@@ -1,1 +1,1 @@
-web: python plate.py
+web: python test.py
