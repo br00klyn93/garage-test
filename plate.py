@@ -37,7 +37,6 @@ def find_model():
     car_name = carname[0].get_text()
 
     print(car_name+"F")
-    return car_name+"F"
 
     get_msrp()
 
@@ -84,18 +83,19 @@ def save_data():
     result = sheet.append_row([info[1], info[2], info[0], msrp, plate, state])
     pp.pprint(result)
 
-@app.route('/')
+
 def test():
     IMAGE_PATH = 'test.jpg'
     with open(IMAGE_PATH, 'rb') as image_file:
         img_base64 = base64.b64encode(image_file.read())
     return "reeeee"
-        
+    
+@app.route('/')  
 def get_plate():
     global plate
     global state
     
-    IMAGE_PATH = 'car.jpg'
+    IMAGE_PATH = 'test.jpg'
     SECRET_KEY = 'sk_12bac89cf5b2708ed2c92944'
 
     with open(IMAGE_PATH, 'rb') as image_file:
