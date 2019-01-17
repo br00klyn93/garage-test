@@ -56,10 +56,6 @@ def get_msrp():
         info.pop(3)
 
 
-    for i in info:
-        print(i)
-        hello(i)
-
     cars = sheet.findall(info[1])
     
     for f in cars:
