@@ -27,7 +27,6 @@ def find_model():
 
     url = "https://findbyplate.com/US/"+state+"/"+plate+"/"
     print("URL: "+url)
-    return "URL: "+url
 
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
