@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <title>Weissman</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="script.js"></script>
-
   </head>
   <body>
 
 <div class="overlay">
     <div id="top-box-container">
         <div id="top-box">
-            
-        <div id="top-button">
+
+        <div id="top-button" class="animated fadeIn">
             <div class="circle">
                 <h4 class="text">home</h4>
             </div>
@@ -24,20 +24,24 @@
 
 
     <div id="contents">
-        <div class="box" id="box-top">
+        <div class="box animated fadeInUp slow" id="box-top">
             <div class="box-top">
                 <img class="box-img" src="imgs/driveway.jpg">
             </div>
             <div >
             <div class="box-bottom">
-                <h4 class="box-title">
-                    Hey! There's a Gray Toyota in Your Driveway!
+                <h4 class="box-title animated pulse delay-2s">
+                    A Gray Toyota Just Arrived!
                 </h4>
 
-                <h2 class="box-info">
+                <button class="box-button">
+                    Add to Friends List
+                </button>
+
+                <!-- <h2 class="box-info">
                     Click here to add it to your friends list.
-                </h2>
-                <p class="box-time">
+                </h2> -->
+                <p class="box-time animated fadeIn slow">
                     1 min ago
                 </p>
             </div>
@@ -46,11 +50,27 @@
 
         </div>
 
-        <div class="box"></div>
+        <div class="box animated fadeInUp slow">
+            <div class="box-top">
+                <h4 class="box-top-title animated pulse delay-3s">
+                    Your Garage Door Is Open
+                </h4>
+            </div>
 
-        <div class="box"></div>
+            <div class="box-bottom">
+                    <button class="box-button">
+                            Close Garage
+                    </button>
 
-        <div class="box"></div>
+                    <p class="box-time animated fadeIn slow">
+                            1 min ago
+                    </p>
+            </div>
+        </div>
+
+        <div class="box animated fadeInUp slow"></div>
+
+        <div class="box animated fadeInUp slow"></div>
     </div>
 
 </div>
